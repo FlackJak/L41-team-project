@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Bluestock</title>
+  <link rel="stylesheet" href="sign.css" />
+  <style>
+    .toggle-password {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 style="color: white; margin-top: 20px;">Welcome to Bluestock!</h2>
+    <p style="color: white; margin-bottom: 10px;">Create your account</p>
+
+    <div class="form-box">
+      <img class="logo" src="logo.webp" alt="Bluestock Logo" />
+      <form id="signupForm">
+        <div class="input-box">
+          <span class="icon">👤</span>
+          <input type="text" id="fullName" placeholder="Full Name" required />
+        </div>
+        <div class="input-box">
+          <span class="icon">📧</span>
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="input-box">
+          <span class="icon">🔒</span>
+          <input type="password" id="password" placeholder="Password" required />
+          <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+        </div>
+        <div class="input-box">
+          <span class="icon">🔒</span>
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+          <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="signupTermsCheckbox" />
+          <label for="signupTermsCheckbox">I Agree to the <a href="#">Terms and Conditions</a></label>
+        </div>
+
+        <button type="submit" class="btn" onclick="signup(event)">Sign Up</button>
+        <p class="login-link">Already have an account? <a href="index.html">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function signup(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const checkbox = document.getElementById("signupTermsCheckbox");
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!checkbox.checked) {
+        alert("Please agree to the Terms and Conditions before signing up.");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+
+      alert("Signup successful! (Simulation)");
+    }
+
+    function togglePassword(fieldId) {
+      const field = document.getElementById(fieldId);
+      field.type = field.type === "password" ? "text" : "password";
+    }
+    function signup(event) {
+        event.preventDefault();
+  // Your existing signup logic here (if any)
+
+  // Redirect to the Sign In page
+  window.location.href = 'index.html';
+}
+
+  </script>
+</body>
+
+</html>
