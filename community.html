@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluestock - Community</title>
+  <link rel="stylesheet" href="community.css" />
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
+
+
+  <!-- Community Hero Section -->
+  <section class="community-hero">
+    <div class="container">
+      <div class="text">
+        <h2>The Most Active<br>Community of Traders & Investors</h2>
+        <p>Join discussions with thousands of traders, learn and grow from the experiences of others, and exchange your ideas.</p>
+        <button class="btn-primary">Join the Community</button>
+      </div>
+      <img src="community chat.png" alt="Community chat preview" class="hero-img">
+    </div>
+  </section>
+  
+  <section class="benefits">
+    <div class="container">
+      <div class="text">
+        <h3>be a part of trading &<br>investments club</h3>
+        <ul>
+          <li>Rich environment for investing knowledge</li>
+          <li>Stay connected about latest financial content</li>
+          <li>Access exclusive community events, webinars and meet-ups</li>
+        </ul>
+      </div>
+      <img src="community chat2.png" alt="Community chat preview" class="hero-img">
+    </div>
+  </section>
+
+  <!-- Expert Support Section -->
+<section class="support">
+    <div class="container support-container">
+      <div class="support-text">
+        <h3>Team Bluestock Cares</h3>
+        <p>Interact with our members to engage,<br> clarify and contribute</p>
+        <h4>Interact With Our Experts</h4>
+        <ul>
+          <li>Get valid suggestions</li>
+          <li>Raise issues or concerns</li>
+          <li>Ask your questions</li>
+        </ul>
+      </div>
+      <div class="support-image-stack">
+        <img src="community chat3.png" alt="Expert chat preview" class="chat-img">
+      </div>
+    </div>
+  </section>
+  
+
+  <script src="community.js"></script>
+</body>
+</html>

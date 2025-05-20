@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluestock - Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+  <script defer src="contact.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <!-- Replaced text logo with image -->
+      <div class="logoblue">
+        <img src="logo.webp" alt="Bluestock Logo" style="height:29px;" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">IPO</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Brokers</a></li>
+        <li><a href="#">Live News</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button onclick="signIn()">Sign In</button>
+        <button onclick="signUp()" class="signup">Sign Up Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">Home &gt; Contact Us</div>
+    <h1>How Can We Help You ?</h1>
+    <div class="contact-options">
+      <div class="card">
+        <p>Email us</p>
+        <p>One of our agents will respond at the earliest</p>
+        <a href="mailto:hello@bluestock.in" class="btn">hello@bluestock.in →</a>
+      </div>
+      <div class="card">
+        <p>Chat us</p>
+        <p>Available from 8:00AM to 5:00PM</p>
+        <button class="btn" onclick="openChat()">Open Chat →</button>
+      </div>
+    </div>
+
+    <section class="community-section">
+      <h2>Interact With Us in Our Active Community</h2>
+      <p>Ask questions or discuss anything related to investing or trading in the most active trading & investing community</p>
+      <button class="join-btn" onclick="joinCommunity()">JOIN NOW</button>
+    </section>
+
+    <section class="app-download">
+      <div class="qr-box">
+        <p>Download Bluestock Mobile App</p>
+        <!-- Replaced QR code with your uploaded image -->
+        <img src="bluestock_qr_full.png" alt="QR Code" style="width: 150px;" />
+        <img class="playstore-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+      </div>
+    </section>
+  </main>
+</body>
+</html>
